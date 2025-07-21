@@ -7,19 +7,21 @@ Este proyecto es una práctica de desarrollo web con HTML y CSS, orientada a ref
 
 ## 📁 Estructura del Proyecto
 
+```
 sitiowebCSS/
-├── index.html # Página principal del sitio web
-├── fcnm.html # Página de la Facultad de Ciencias Naturales y Matemáticas
-├── historia.html # Página de historia institucional
-├── styles.css # Hoja de estilos externa
+├── index.html        # Página principal del sitio web
+├── fcnm.html         # Página de la Facultad de Ciencias Naturales y Matemáticas
+├── historia.html     # Página de historia institucional
+├── styles.css        # Hoja de estilos externa
 │
-├── img/ # Carpeta que contiene las imágenes
-│ ├── banner.jpg
-│ ├── faviconUES.png
-│ └── logo.png
+├── img/              # Carpeta que contiene las imágenes
+│   ├── banner.jpg
+│   ├── faviconUES.png
+│   └── logo.png
 │
-└── media/ # Carpeta para archivos multimedia
-└── video.mp4
+└── media/            # Carpeta para archivos multimedia
+    └── video.mp4
+```
 
 ## 🧰 Tecnologías Utilizadas
 
