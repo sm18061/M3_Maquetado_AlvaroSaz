@@ -1,0 +1,498 @@
+
+
+/* --------------------------- */
+/*      FUENTE Y BASE         */
+/* --------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* --------------------------- */
+/*        ESTILOS GENERALES   */
+/* --------------------------- */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: linear-gradient(135deg, #e3eafc, #f6f9ff);
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* --------------------------- */
+/*     GRID PRINCIPAL          */
+/* --------------------------- */
+.layout-grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+header { grid-area: header; }
+aside { grid-area: aside; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+/* --------------------------- */
+/*        ENCABEZADO          */
+/* --------------------------- */
+header {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1em 1em;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid #e3eafc;
+}
+
+.main-title {
+  font-size: 2rem;
+  margin: 0.5em 0;
+  line-height: 0.2;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* --------------------------- */
+/*         NAVEGACIÓN         */
+/* --------------------------- */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.8em;
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  color: #003366;
+  background-color: #e3eafc;
+  padding: 0.5em 1.2em;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.nav-link:hover {
+  background-color: #0056b3;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-icon {
+  font-size: 1.2em;
+}
+
+.nav-titulo {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1em;
+  margin-bottom: 0em;
+  text-align: center;
+  width: 65%;
+}
+
+/* --------------------------- */
+/*           ASIDE            */
+/* --------------------------- */
+aside {
+  background: #f6f9ff;
+  padding: 1.5em 1em;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+aside h3 {
+  color: #003366;
+  margin-top: 0;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 1em;
+}
+
+aside ul li a {
+  color: #003366;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+aside ul li a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* ===== Estilos mejorados para el aside y sus enlaces ===== */
+
+.aside-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.aside-item:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.aside-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  color: #222;
+  background: #e3eafc;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(60,60,100,0.06);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+  outline: none;
+  position: relative;
+}
+
+.aside-link:hover, .aside-link:focus {
+  background: #c5cae9;
+  color: #0d133d;
+  box-shadow: 0 2px 8px rgba(60,60,100,0.13);
+  transform: scale(1.04);
+}
+
+.aside-link:focus {
+  border: 2px solid #3949ab;
+}
+
+.aside-icon {
+  font-size: 1.3em;
+  margin-right: 0.3em;
+}
+
+/* Tooltip para enlaces externos */
+.aside-link[target="_blank"]::after {
+  content: " (nueva pestaña)";
+  font-size: 0.85em;
+  color: #757575;
+  opacity: 0;
+  margin-left: 0.2em;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.aside-link[target="_blank"]:hover::after,
+.aside-link[target="_blank"]:focus::after {
+  opacity: 1;
+}
+
+/* Mensaje motivacional en el aside */
+.aside-mensaje {
+  margin-top: 1.2em;
+  font-size: 1em;
+  color: #3949ab;
+  text-align: center;
+  font-style: italic;
+  background: #e8eaf6;
+  border-radius: 8px;
+  padding: 0.5em 0.7em;
+  box-shadow: 0 1px 3px rgba(60,60,100,0.04);
+}
+
+/* --------------------------- */
+/*    SECCIONES DE TEXTO       */
+/* --------------------------- */
+.titulo-centrado {
+  text-align: center;
+  color: hsl(210, 100%, 20%);
+  font-size: 2em;
+  margin: 1em 0;
+}
+
+p {
+  max-width: 700px;
+  margin: 1em auto;
+  text-align: justify;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.centrado p {
+  text-align: center;
+}
+
+/* --------------------------- */
+/*          LOGO FCNM          */
+/* --------------------------- */
+.logo {
+  display: block;
+  margin: 0em auto;
+  max-width: 150px;
+  width: 25%;
+  height: auto;
+}
+
+/* --------------------------- */
+/*   ENLACE DESTACADO          */
+/* --------------------------- */
+#destacado {
+  background-color: #ffe066;
+  color: #003366;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+/* --------------------------- */
+/*   TARJETAS FLEXBOX          */
+/* --------------------------- */
+.tarjetas-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+.tarjeta {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  padding: 1em;
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #ddd;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,86,179,0.15);
+  border-color: #0056b3;
+}
+
+.tarjeta-icono {
+  font-size: 2.2em;
+  margin-bottom: 0.3em;
+  display: block;
+  text-align: center;
+}
+
+.tarjeta h4, .tarjeta .dep-titulo {
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.tarjeta p, .tarjeta .dep-desc {
+  color: #222;
+  margin: 0;
+}
+
+/* ------------------------------------------------ */
+/* Centrado especial para la lista de departamentos */
+/* ------------------------------------------------ */
+.departamentos-centrado {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style: none;
+}
+
+.departamentos-centrado li {
+  margin-bottom: 1.5em;
+  padding: 1em 2em;
+  background: #f6f9ff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dep-titulo {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #003366;
+  margin-bottom: 0.4em;
+  display: block;
+}
+
+.dep-desc {
+  font-size: 1em;
+  color: #222;
+  display: block;
+  line-height: 1.4;
+}
+
+/* --------------------------- */
+/*         FORMULARIO         */
+/* --------------------------- */
+.formulario {
+  background: #fff;
+  max-width: 400px;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #b3c6e7;
+}
+
+.formulario h3 {
+  color: #003366;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+  width: 100%;
+  padding: 0.7em;
+  margin-top: 0.3em;
+  border-radius: 6px;
+  border: 1px solid #b3c6e7;
+  font-size: 1em;
+  background: #e3eafc;
+  box-sizing: border-box;
+}
+
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+  margin-right: 0.5em;
+  accent-color: #003366;
+}
+
+.formulario input[type="submit"] {
+  background: linear-gradient(90deg, #003366 60%, #0056b3 100%);
+  color: #fff;
+  border: none;
+  padding: 0.7em 2em;
+  border-radius: 8px;
+  margin-top: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.formulario input[type="submit"]:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #003366 100%);
+}
+
+.grupo-genero legend {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+/* --------------------------- */
+/*           FOOTER           */
+/* --------------------------- */
+footer {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 3em;
+  border-radius: 20px 20px 0 0;
+  font-size: 0.9em;
+}
+
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+footer nav a:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* --------------------------- */
+/*         RESPONSIVE         */
+/* --------------------------- */
+@media (max-width: 700px) {
+  .layout-grid {
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 80%;
+  }
+
+  aside {
+    border-radius: 0 0 20px 20px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .tarjetas-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 90%;
+    max-width: 350px;
+  }
+}

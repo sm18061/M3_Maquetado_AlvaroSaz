@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador align-items</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch; /* Valor inicial */
+      height: 200px;
+      border: 2px dashed #333;
+      background-color: white;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .item {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      width: 80px;
+      text-align: center;
+    }
+
+    .item:nth-child(2) {
+      font-size: 1.8rem;
+    }
+
+    select {
+      padding: 6px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Simulador <code>align-items</code></h2>
+  
+  <div class="controls">
+    <label for="align">Seleccioná un valor:</label>
+    <select id="align">
+      <option value="stretch">stretch (default)</option>
+      <option value="center">center</option>
+      <option value="flex-start">flex-start</option>
+      <option value="flex-end">flex-end</option>
+      <option value="baseline">baseline</option>
+    </select>
+  </div>
+
+  <div class="flex-container" id="flex-container">
+    <div class="item">Caja 1</div>
+    <div class="item">Caja 2</div>
+    <div class="item">Caja 3</div>
+  </div>
+
+  <script>
+    const select = document.getElementById("align");
+    const container = document.getElementById("flex-container");
+
+    select.addEventListener("change", () => {
+      const value = select.value;
+      container.style.setProperty("align-items", value);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador Flexbox: Ejes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Simulador Visual de Flexbox</h1>
+
+  <div class="controls">
+    <label for="direction">Cambiar <code>flex-direction</code>:</label>
+    <select id="direction">
+      <option value="row">row (➡ horizontal)</option>
+      <option value="row-reverse">row-reverse (⬅ horizontal inverso)</option>
+      <option value="column">column (⬇ vertical)</option>
+      <option value="column-reverse">column-reverse (⬆ vertical inverso)</option>
+    </select>
+  </div>
+
+  <div id="axis-labels">
+    <span class="main-axis">↔ Eje Principal</span>
+    <span class="cross-axis">↕ Eje Transversal</span>
+  </div>
+
+  <div class="flex-container" id="flex-container">
+    <div class="item">Caja 1</div>
+    <div class="item">Caja 2</div>
+    <div class="item">Caja 3</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

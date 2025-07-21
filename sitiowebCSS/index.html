@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Encabezado del documento -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Facultad de Ciencias Naturales y Matemáticas - UES</title>
+    <link rel="icon" href="./img/faviconUES.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <!-- Cuerpo del documento -->
+  <body>
+    <div class="layout-grid">
+      <header>
+        <nav>
+          <!--<span class="nav-titulo">Navegación del sitio</span> -->
+          <div class="nav-opciones">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span> Inicio</a></li>
+              <li><a href="fcnm.html" class="nav-link"><span class="nav-icon">🎓</span> Sobre la FCNM</a></li>
+              <li><a href="historia.html" class="nav-link"><span class="nav-icon">📖</span> Historia</a></li>
+            </ul>
+          </div>
+        </nav>
+        <h1 class="main-title">Facultad de Ciencias Naturales y Matemáticas</h1>
+        <h2 class="sub-title">Universidad de El Salvador</h2>
+      </header>
+      <!-- Nuevo aside agregado -->
+      <aside>
+        <h3 class="aside-titulo">Enlaces útiles</h3>
+        <ul>
+          <li><a href="https://www.ues.edu.sv/" target="_blank"><span style="margin-right:0.5em;">🏛️</span> Sitio UES</a>
+          </li>
+          <li><a href="https://www.facebook.com/Naturales.UES/?locale=es_LA" target="_blank"><span
+                style="margin-right:0.5em;">📘</span> Facebook FCNM</a></li>
+          <li><a href="fcnm.html"><span style="margin-right:0.5em;">🎓</span> Sobre la FCNM</a></li>
+          <li><a href="historia.html"><span style="margin-right:0.5em;">📖</span> Historia</a></li>
+        </ul>
+        <div class="aside-mensaje">¡La ciencia transforma el mundo, sigue aprendiendo!</div>
+      </aside>
+      <!-- Sección principal del contenido -->
+      <main>
+        <section class="bienvenida">  <!-- Sección de bienvenida -->
+          <h3 class="titulo-centrado">Bienvenidos a la Facultad</h3>
+          <img src="./img/Logo_facultad_azul.png" alt="Logo de la FCNM UES" class="logo" />
+          <p>
+            La Facultad de Ciencias Naturales y Matemáticas (FCNM) de la Universidad de El Salvador es un referente
+            nacional
+            en la formación de profesionales en las áreas de Biología, Física, Matemática, Química y Estadística. Nuestra
+            misión es impulsar la investigación, la docencia y la proyección social, contribuyendo al desarrollo
+            científico
+            y tecnológico del país.
+          </p>
+          <div class="centrado" style="margin: 1.5em 0;">
+            <h3 class="titulo-centrado">Video Institucional UES</h3>
+            <iframe width="50%" height="315" src="https://www.youtube.com/embed/-hC7gU0Kg2o?si=C7oh2ckntSPq-L-8"
+              title="Video documental: Historia de la FCNM" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="centrado">
+            <a href="https://www.facebook.com/Naturales.UES/?locale=es_LA" id="destacado" target="_blank"
+              rel="noopener noreferrer">Visita el sitio oficial de la FCNM</a>
+          </div>
+        </section>
+
+        <!-- Contenedor de tarjetas usando Flexbox -->
+        <section>
+          <h3 class="titulo-centrado">Áreas Destacadas</h3>
+          <div class="tarjetas-flex">
+            <div class="tarjeta">
+              <span class="tarjeta-icono">🔬</span>
+              <h4>Investigación</h4>
+              <p>Proyectos y grupos de investigación en ciencias naturales y matemáticas.</p>
+            </div>
+            <div class="tarjeta">
+              <span class="tarjeta-icono">👩‍🏫</span>
+              <h4>Docencia</h4>
+              <p>Formación académica de calidad en Biología, Física, Matemática, Química y Estadística.</p>
+            </div>
+            <div class="tarjeta">
+              <span class="tarjeta-icono">🌎</span>
+              <h4>Proyección Social</h4>
+              <p>Vinculación con la sociedad y actividades de extensión universitaria.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección de formulario contacto -->
+        <section class="formulario-contacto">
+          <form action="#" method="post" class="formulario">
+            <h3>Contáctanos</h3>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required />
+
+            <fieldset class="grupo-genero">
+              <legend>Género:</legend>
+              <label><input type="radio" id="masculino" name="genero" value="masculino" required /> Masculino</label>
+              <label><input type="radio" id="femenino" name="genero" value="femenino" /> Femenino</label>
+            </fieldset>
+
+            <label><input type="checkbox" id="suscripcion" name="suscripcion" value="si" /> Deseo recibir información
+              sobre
+              eventos y noticias</label>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <input type="submit" value="Enviar" />
+          </form>
+        </section>
+      </main>
+      <!-- Pie de página con enlaces de navegación -->
+      <footer>
+        <nav>
+          <a href="index.html">🏠 Inicio</a>
+          <b>|</b>
+          <a href="fcnm.html">🎓 Sobre la FCNM</a>
+          <b>|</b>
+          <a href="historia.html">📖 Historia</a>
+        </nav>
+        <small>Navega por el sitio usando los enlaces superiores o inferiores</small><br />
+        <small>Autor: @sazmarquez</small>
+      </footer>
+    </div>
+  </body>
+</html>

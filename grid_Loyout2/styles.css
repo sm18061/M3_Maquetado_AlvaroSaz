@@ -1,0 +1,31 @@
+/*-----------------------------*/        
+/*---Color de fondo del body---*/
+/*-----------------------------*/
+body {
+    background-color: antiquewhite; /* Cambia el color de fondo del body */
+    font-family: Arial, sans-serif; /* Cambia la fuente del texto */
+    text-align: center; /* Centra el texto en el body */
+}
+.grid-layout {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;    /* Define dos columnas, la primera ocupa el 50% del ancho y la segunda ocupa el espacio restante */
+    grid-template-rows: 100px auto auto;   /* Define dos filas, la primera tiene una altura de 100px y la segunda de 120px */
+    justify-content: flex-start ;
+    width: 80%;                        /* Define el ancho del grid al 80% del contenedor */
+    margin: 0 auto;                    /* Centra el grid en la página */ 
+    background-color: lightgreen;   /* Cambia el color de fondo del grid */      
+    padding: 20px;                      /* Añade un padding de 20px alrededor del grid */ 
+    border: 1px solid black;        /* Añade un borde de 1px alrededor del grid */        
+}
+.Caja {
+    border: 4px solid black;    /* Añade un borde de 4px alrededor de las cajas */
+    background-color: lightgray;    /* Cambia el color de fondo de las cajas */
+    text-align: center;   /* Centra el texto dentro de las cajas */ 
+    line-height: 150px;     /* Ajusta la altura de línea para centrar el texto verticalmente */
+    
+}
+
+.c1 {
+    grid-column: auto; 
+    grid-row: 1; 
+}
